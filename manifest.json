@@ -4,8 +4,10 @@
   "version": "0.2",
   "content_scripts" : [
   	{
+      "run_at" : "document_end",
   	  "matches": ["http://stackoverflow.com/*"],
-  	  "js" : ["jquery-2.2.0.min.js", "linker.js", "content.js"]
+  	  "js" : ["jquery-2.2.0.min.js", "javaClasses.json", "findClassName.js", "content.js" ],
+      "css" : ["css.css"]
   	}
   ]
 }
