@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Stack Overflow Class Linker",
-  "version": "1.0",
+  "version": "1.0.1",
   "content_scripts" : [
   	{
       "run_at" : "document_end",
