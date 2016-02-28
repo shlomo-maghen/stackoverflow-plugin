@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "My Cool Extension",
-  "version": "0.2",
+  "name": "Stack Overflow Class Linker",
+  "version": "1.0",
   "content_scripts" : [
   	{
       "run_at" : "document_end",
