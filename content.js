@@ -1,23 +1,28 @@
 setTimeout(function(){
-  //first check if there is a java tag
+  //parse tags
   java8Tag = false;
+  androidTag = false;
   tags = $(".post-taglist a")
   for(i = 0; i < tags.length; i++){
-    if(tags[i].innerText.toUpperCase() == "JAVA"){
+    tag = tags[i].innerText.toUpperCase();
+    if(tag == "JAVA"){
       java8Tag = true;
-      break;
+    }else if(tag == "ANDROID"){
+      androidTag = true;
     }
   }
-  if(java8Tag){
-    //all java class names have class 'typ' on stack overflow
+
+  replaceElements = function(classes){
+    //all class names have class 'typ' on stack overflow
     //get all span elements with class 'typ'
     c = $(".typ");
-    //for each element, check if class exists in javaClasses.json
+
+    //for each element, check if class exists in respective classes array
     for (i = 0; i < c.length; i++){
       //element text
       className = c[i].innerText;
       //if found class name, its index is returned
-      index = findClassName(className);
+      index = findClassName(className, classes);
       if(index > -1){
         element = $(c[i])
         row = classes[index]
@@ -26,4 +31,13 @@ setTimeout(function(){
       }
     }
   }
+
+  if(java8Tag){
+    replaceElements(classesJava8);
+  }
+  if(androidTag){
+    replaceElements(classesAndroid);
+  }
+
+
 }, 1000)

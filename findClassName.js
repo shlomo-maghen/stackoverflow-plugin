@@ -1,5 +1,5 @@
 //binary search to find class Names
-findClassName = function(className){
+findClassName = function(className, classes){
 	left = 0;
 	right = Object.keys(classes).length-1;
 	//return index if found

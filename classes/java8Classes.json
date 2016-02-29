@@ -1,4 +1,4 @@
-classes = [
+classesJava8 = [
 {"class":"AbstractAction","href":"https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractAction.html"},
 {"class":"AbstractAnnotationValueVisitor6","href":"https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/AbstractAnnotationValueVisitor6.html"},
 {"class":"AbstractAnnotationValueVisitor7","href":"https://docs.oracle.com/javase/8/docs/api/javax/lang/model/util/AbstractAnnotationValueVisitor7.html"},
