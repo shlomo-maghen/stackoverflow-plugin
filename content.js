@@ -27,7 +27,8 @@ setTimeout(function(){
         element = $(c[i])
         row = classes[index]
         //replace the element with our own element, adding unique class name for css
-        element.replaceWith('<a class="new_link_333" href="' + row.href + '">' +  row.class + "</a>");
+        //add typ as a class name so that it can still be found for other classes
+        element.replaceWith('<a class="new_link_333 typ" href="' + row.href + '">' +  row.class + "</a>");
       }
     }
   }
